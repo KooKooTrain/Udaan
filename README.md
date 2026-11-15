@@ -35,5 +35,5 @@ Then, run `udaan.py` and the app will will pop up. To log in as a passenger, ref
 ## Authors
 
 - [@KooKooTrain](https://www.github.com/KooKooTrain) [12-C]
-- [@hridya] [12-C]
+- [@hridyaashokan2-beep](https://www.github.com/hridyaashokan2-beep) [12-C]
 
