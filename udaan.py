@@ -24,7 +24,7 @@ except Exception as db_err:
 #App Theme (Hex Codes & Font)
 THEME_BG = "#177387"
 THEME_FG = "#1a1a1a"
-light    = "#d1eaf0"
+light = "#d1eaf0"
 
 #To get icon images from asset folder
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -39,10 +39,10 @@ def load_icon(name, size=(120, 120)):
 class Application:
     def __init__(self, root):
         self.root = root
-        self.table  = ""
+        self.table = ""
         self.fields = []
-        self.entries    = {}
-        self.entries2   = {}
+        self.entries = {}
+        self.entries2 = {}
         self.check_vars = {}
 
         for widget in self.root.winfo_children():
@@ -59,16 +59,16 @@ class Application:
         self.root.configure(bg=THEME_BG)
 
         #Preload all icons
-        self.admn     = load_icon("admn.png")
-        self.employe  = load_icon("employe.png")
+        self.admn = load_icon("admn.png")
+        self.employe = load_icon("employe.png")
         self.passengr = load_icon("passengr.png")
-        self.flight   = load_icon("flight.png")
-        self.tickt    = load_icon("tickt.png")
+        self.flight = load_icon("flight.png")
+        self.tickt = load_icon("tickt.png")
 
-        self.add_img     = load_icon("add.png")
+        self.add_img = load_icon("add.png")
         self.display_img = load_icon("display.png")
-        self.update_img  = load_icon("update.png")
-        self.delete_img  = load_icon("delete.png")
+        self.update_img = load_icon("update.png")
+        self.delete_img = load_icon("delete.png")
 
         #Main app frame
         self.frame1 = tk.Frame(self.root, bg=light, relief="groove", bd=2)
@@ -103,11 +103,11 @@ class Application:
 
         #Table selection buttons
         tables = [
-            ("Admin",      self.admn,     40),
-            ("Employees",  self.employe,  180),
+            ("Admin", self.admn, 40),
+            ("Employees", self.employe, 180),
             ("Passengers", self.passengr, 320),
-            ("Flights",    self.flight,   460),
-            ("Tickets",    self.tickt,    600),
+            ("Flights", self.flight, 460),
+            ("Tickets", self.tickt, 600),
         ]
 
         for tbl_name, icon, x_pos in tables:
@@ -170,10 +170,10 @@ class Application:
 
         #Operation buttons
         operations = [
-            ("Add",     self.add_img,     self.open_add,    60),
-            ("Display", self.display_img, self.open_disp,  230),
-            ("Update",  self.update_img,  self.open_update, 410),
-            ("Delete",  self.delete_img,  self.open_delete, 580),
+            ("Add", self.add_img, self.open_add, 60),
+            ("Display", self.display_img, self.open_disp, 230),
+            ("Update", self.update_img, self.open_update, 410),
+            ("Delete", self.delete_img, self.open_delete, 580),
         ]
 
         for op_name, icon, cmd, x_pos in operations:
@@ -569,16 +569,16 @@ class Application2:
         self.label2 = tk.Label(self.frame1, text="Select a service below to manage your travel", fg="#177387", font=("Lucida Max", 15), bg=light)
         self.label2.place(x=190, y=90, width=420, height=30)
 
-        self.button6 = tk.Button(self.frame1, image=self.bookf, text="   Book Flight", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button6, bd=0, anchor="w", justify="left")
+        self.button6 = tk.Button(self.frame1, image=self.bookf, text=" Book Flight", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button6, bd=0, anchor="w", justify="left")
         self.button6.place(x=40, y=160, width=190, height=70)
 
         self.button7 = tk.Button(self.frame1, image=self.view, text=" View Boarding\n Pass", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button7, bd=0, anchor="w", justify="left")
         self.button7.place(x=285, y=160, width=210, height=70)
 
-        self.button8 = tk.Button(self.frame1, image=self.status, text="  Check Flight\n  Status", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button8, bd=0, anchor="w", justify="left")
+        self.button8 = tk.Button(self.frame1, image=self.status, text=" Check Flight\n Status", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button8, bd=0, anchor="w", justify="left")
         self.button8.place(x=530, y=160, width=190, height=70)
 
-        self.button9 = tk.Button(self.frame1, image=self.avflights, text="  View Available\n  Flights", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button9, bd=0, anchor="w", justify="left")
+        self.button9 = tk.Button(self.frame1, image=self.avflights, text=" View Available\n Flights", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button9, bd=0, anchor="w", justify="left")
         self.button9.place(x=40, y=290, width=190, height=70)
 
         self.button10 = tk.Button(self.frame1, image=self.cancel, text=" Cancel Flight", compound="left", fg="#0d3f4a", font=("Lucida Max", 12), bg=light, command=self.on_button10, bd=0, anchor="w", justify="left")
@@ -843,7 +843,7 @@ def passenger_dashboard(passenger_id):
 
 #================== LOGIN FUNCTION ==================
 def login():
-    ID       = ID_entry.get().strip()
+    ID = ID_entry.get().strip()
     password = password_entry.get().strip()
 
     if not ID or not password:
